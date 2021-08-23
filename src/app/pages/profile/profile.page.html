@@ -1,0 +1,103 @@
+<ion-header translucent="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title><b>Profile_Name</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="duplicate-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <span>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profileContainer">
+    <div class="layer_1">
+      <div class="devision">
+        <div class="circleDiv">
+          <img [src]="profilePic" class="profileImage">
+        </div>
+      </div>
+
+      <div class="devision">
+        <ion-label class="value">610</ion-label>
+        <ion-label class="title">Posts</ion-label>
+      </div>
+
+      <div class="devision">
+        <ion-label class="value">5,874</ion-label>
+        <ion-label class="title">Followers</ion-label>
+      </div>
+
+      <div class="devision">
+        <ion-label class="value">565</ion-label>
+        <ion-label class="title">Following</ion-label>
+      </div>
+    </div>
+
+    <div class="layer_2">
+      <ion-label class="profileLabel"><b>Dream 11</b></ion-label>
+      <ion-label class="profileLabel" style="color: gray;">Public Figure</ion-label>
+      <ion-label class="profileLabel">Sports lover</ion-label>
+      <ion-label class="profileLabel">Dream 11 for promotions, photoshoots and collaborations</ion-label>
+      <ion-label class="profileLabel">Video creator</ion-label>
+      <ion-label class="profileLabel" style="color: rgb(134, 134, 240);">youtube.com/channel/UCIXMM0ldfwxKa4SkjrL8ywPw</ion-label>
+    </div>
+
+    <div class="layer_3">
+      <div class="optionDiv" *ngFor="let option of options">
+        <ion-label class="optionName">{{option.name}}</ion-label>
+      </div>
+    </div>
+
+    <div class="layer_4">
+      <div class="categoryContainer" *ngFor="let category of categories">
+        <div class="categoryCircle">
+          <img [src]="category.image" class="profileImage">
+        </div>
+        <ion-label class="categoryName">{{category.name}}</ion-label>
+      </div>
+
+      <div class="categoryContainer">
+        <div class="categoryCircle">
+          <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
+        </div>
+        <ion-label class="categoryName">New</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-segment [(ngModel)]="segment">
+        <ion-segment-button value="0">
+          <ion-icon name="grid-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="1">
+          <ion-icon name="play-circle-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+          <ion-icon name="tv-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="3">
+          <ion-icon name="people-circle-outline"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col *ngFor="let post of posts" size="3" sizeLg="3" sizeMd="4" sizeXs="4">
+        <div class="postContainer">
+          <img [src]="post.download_url" class="postImage">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

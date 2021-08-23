@@ -1,0 +1,87 @@
+.profileContainer {
+    width: 100%;
+    padding: 15px;
+    .layer_1 {
+        width: 100%;
+        display: flex;
+        .devision {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .circleDiv {
+                border: 2px solid tomato;
+                width: 90px;
+                height: 90px;
+                padding: 2px;
+                border-radius: 50%;
+            }
+            .value {
+                font-size: 18px;
+                font-weight: bolder;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .layer_2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        .profileLabel {
+            margin-top: 3px;
+        }
+    }
+
+    .layer_3 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .optionDiv {
+            flex: 1;
+            height: 30px;
+            border: 1px solid gray;
+            border-radius: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+    }
+
+    .layer_4 {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        .categoryContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            .categoryCircle {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                border: 2px gray solid;
+                padding: 2px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+}
+
+ion-col {
+    padding: 2px;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}

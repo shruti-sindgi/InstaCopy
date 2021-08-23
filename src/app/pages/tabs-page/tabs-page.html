@@ -1,0 +1,27 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="search">
+      <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="play-circle-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="heart-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile">
+      <div style="width: 40px; height: 40px; border-radius: 50%; border: 2px gray solid; display: flex; justify-content: center; align-items: center;">
+        <img [src]="profilePic" style="width: 100%; height: 100%; border-radius: 50%;">
+      </div>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

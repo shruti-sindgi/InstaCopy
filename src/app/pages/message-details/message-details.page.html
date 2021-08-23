@@ -1,0 +1,47 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <div style="display: flex; align-items: center; margin-left: 20px;">
+      <label *ngIf="!ios" style="font-size: 18px; font-weight: bold;"><b>{{chatName}}</b></label>
+      <div style="width: 10px; height: 10px; background: rgb(14, 165, 8); border-radius: 50%; margin-left: 10px;"></div>
+    </div>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!ios">
+        <ion-icon slot="icon-only" name="list-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <span *ngIf="ios">Filter</span>
+        <span *ngIf="!ios">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+        </span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+  <div class="mainConatiner">
+    <div *ngFor="let bubble of messageList"
+      [ngClass]="{'chatBubbleContainer_left': bubble.sender == 1, chatBubbleContainer_right: bubble.sender == 0}">
+
+      <div class="profileDiv" *ngIf="bubble.sender == 1">
+        <img [src]="chatProfilePic" class="profileImage">
+      </div>
+      <div [ngClass]="{'chatBubble_left': bubble.sender == 1, 'chatBubble_right': bubble.sender == 0}">
+        <ion-label class="lblMessage">{{bubble.message}}</ion-label>
+      </div>
+
+    </div>
+
+    <div class="inputContainer">
+      <ion-input type="text" class="inputBox" placeholder="Message..."></ion-input>
+      <ion-button fill="clear" class="sendBtn">Send</ion-button>
+    </div>
+  </div>
+
+
+
+</ion-content>

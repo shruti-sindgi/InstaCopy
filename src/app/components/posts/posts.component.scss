@@ -1,0 +1,116 @@
+.postContainer {
+    width: 100%;
+
+    .postHeader {
+        flex: 1;
+        display: flex;
+        position: relative;
+        padding: 5px;
+        padding-left: 15px;
+        align-items: center;
+
+        ion-icon {
+            position: absolute;
+            right: 15px;
+            font-size: 22px;
+        }
+
+        .profileCircle {
+            width: 40px;
+            height: 40px;
+            border: 2px tomato solid;
+            //padding: 2px;
+            border-radius: 50%;
+            margin-right: 10px;
+
+            .postProfileImage {
+                border-radius: 50%;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+
+        .postHeaderLabelContainer {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .postActions {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        .actionSectionLeft {
+            flex: 1;
+            padding-left: 10px;
+            ion-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+        }
+
+        .actionSectionRight {
+            flex: 1;
+            ion-icon {
+                font-size: 28px;
+                margin-right: 10px;
+                float: right;
+            }
+        }
+    }
+
+    .postBottomSection {
+        padding-left: 15px;
+        font-size: 16px;
+    }
+
+    .postDescriptionArea {
+        padding-left: 15px;
+        width: 100%;
+        padding-right: 10px;
+
+        .description {
+            width : 100%;
+            overflow:hidden;
+            display:inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .postCommentSection {
+        margin-top: 5px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        width: 80%;
+        height: 40px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: rgb(231, 231, 231);
+        display: flex;
+        .inputContainer {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            .commentInput {
+                background: none;
+                flex: 4;
+                height: 40px;
+                border: none;
+                padding-left: 25px;
+            }
+    
+            .sendBtn {
+                flex: 1;
+            }
+        }
+
+    }
+}

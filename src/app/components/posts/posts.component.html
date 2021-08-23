@@ -1,0 +1,41 @@
+<div class="postContainer">
+  <div class="postHeader">
+    <div class="profileCircle">
+      <img [src]="url" class="postProfileImage">
+    </div>
+    <div class="postHeaderLabelContainer">
+      <label>{{author}}</label>
+      <label style="font-size: 12px;">Sponsered by Lorem Ipsum</label>
+    </div>
+    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+  </div>
+
+  <img [src]="url" class="postImage">
+
+  <div class="postActions">
+    <div class="actionSectionLeft">
+      <ion-icon name="heart-outline"></ion-icon>
+      <ion-icon name="chatbubble-outline"></ion-icon>
+      <ion-icon name="paper-plane-outline" (click)="share()"></ion-icon>
+    </div>
+    <div class="actionSectionRight">
+      <ion-icon name="bookmark-outline"></ion-icon>
+    </div>
+  </div>
+
+  <div class="postBottomSection">
+    <ion-label><b>{{id}}K Likes</b></ion-label>
+  </div>
+
+  <div class="postDescriptionArea">
+    <ion-label class="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+    </ion-label>
+  </div>
+
+  <div class="postCommentSection">
+    <div class="inputContainer">
+      <input type="text" placeholder="Add a comment" class="commentInput">
+      <ion-button fill="clear" class="sendBtn">Post</ion-button>
+    </div>
+  </div>
+</div>

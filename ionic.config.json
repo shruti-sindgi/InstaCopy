@@ -1,0 +1,7 @@
+{
+  "name": "insta-copy",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
